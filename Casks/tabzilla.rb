@@ -4,7 +4,7 @@ cask "tabzilla" do
 
   url "https://github.com/tabzilladev/tabzilla/releases/download/v#{version}/Tabzilla-#{version}-macos.zip"
   name "Tabzilla"
-  desc "URL routing daemon for macOS - routes links to browsers based on rules"
+  desc "URL routing daemon - routes links to browsers based on rules"
   homepage "https://github.com/tabzilladev/tabzilla"
 
   depends_on macos: :ventura
@@ -12,7 +12,8 @@ cask "tabzilla" do
   app "Tabzilla.app"
 
   postflight do
-    system_command "/System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister",
+    system_command "/System/Library/Frameworks/CoreServices.framework" \
+                   "/Frameworks/LaunchServices.framework/Support/lsregister",
                    args: ["-f", "#{appdir}/Tabzilla.app"]
   end
 
