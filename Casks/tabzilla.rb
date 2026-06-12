@@ -7,7 +7,8 @@ cask "tabzilla" do
   desc "URL routing daemon for macOS - routes links to browsers based on rules"
   homepage "https://github.com/tabzilladev/tabzilla"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
+
   app "Tabzilla.app"
 
   postflight do
