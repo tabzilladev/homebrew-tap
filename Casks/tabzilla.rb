@@ -1,6 +1,6 @@
 cask "tabzilla" do
-  version "0.2.1"
-  sha256 "ca8ad729f57d2cd24bd0dc86f895206f39ce61d45b45331d603c2fbb29197da3"
+  version "0.2.2"
+  sha256 "8345d54a27ced6c57c67cd823fc990044679781717e8894dac3d5754b5466f55"
 
   url "https://github.com/tabzilladev/tabzilla/releases/download/v#{version}/Tabzilla-#{version}-macos.zip"
   name "Tabzilla"
