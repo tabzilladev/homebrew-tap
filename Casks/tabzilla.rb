@@ -27,6 +27,9 @@ cask "tabzilla" do
   #     `lsregister -u` does NOT clear the persisted choice — the rebuild does.)
   #   - TCC: Accessibility + Automation (AppleEvents) grants.
   # Each command is best-effort (`|| true`) so a missing entry doesn't fail zap.
+  # TCC caveat: while not code-signed, grants aren't reliably keyed to the bundle
+  # id, so `tccutil reset` may match nothing and the grant survives — users can
+  # remove Tabzilla manually in System Settings › Privacy & Security if needed.
   # Gatekeeper's "Open Anyway" approval is keyed to code identity and is not
   # resettable here; a fresh install re-quarantines and re-triggers it.
   zap script: {
