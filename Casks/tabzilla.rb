@@ -10,6 +10,7 @@ cask "tabzilla" do
   depends_on macos: :ventura
 
   app "Tabzilla.app"
+  binary "#{appdir}/Tabzilla.app/Contents/MacOS/Tabzilla", target: "tabz"
 
   postflight do
     system_command "/System/Library/Frameworks/CoreServices.framework" \
